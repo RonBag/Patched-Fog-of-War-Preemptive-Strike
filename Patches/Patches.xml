@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>(NWN) Real Fog of War</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<!-- Adding FOV to the towers. -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="PES_PremitiveWatchtower_new"]/comps</xpath>
+					<value>
+					<li Class="RimWorldRealFoW.CompProperties_AffectVision">
+						<fovMultiplier>1.6</fovMultiplier>
+					</li>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="PES_MedievalWatchtower"]/comps</xpath>
+					<value>
+					<li Class="RimWorldRealFoW.CompProperties_AffectVision">
+						<fovMultiplier>1.8</fovMultiplier>
+					</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="PES_watchtower_new"]/comps</xpath>
+					<value>
+					<li Class="RimWorldRealFoW.CompProperties_AffectVision">
+						<fovMultiplier>2.2</fovMultiplier>
+					</li>
+					</value>
+				</li>
+
+				<!-- Component Costs -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "SecurityBellSmall"]/costList</xpath>
+					<value>
+						<costList>
+							<Mechanism>1</Mechanism>
+						</costList>
+					</value>
+				</li>
+
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/ThingDef[defName = "SecurityBellSmall"]/costList</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>10</costStuffCount>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "SecurityBell"]/costList</xpath>
+					<value>
+						<costList>
+							<Mechanism>2</Mechanism>
+						</costList>
+					</value>
+				</li>
+
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/ThingDef[defName = "SecurityBell"]/costList</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>25</costStuffCount>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "TowerLightBeacon"]/costList</xpath>
+					<value>
+						<costList>
+							<Mechanism>4</Mechanism>
+							<ComponentIndustrial>10</ComponentIndustrial>
+						</costList>
+					</value>
+				</li>
+
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/ThingDef[defName = "TowerLightBeacon"]/costList</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>25</costStuffCount>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "CameraConsole"]/costList</xpath>
+					<value>
+						<costList>
+							<Mechanism>15</Mechanism>
+							<Electronics>4</Electronics>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/ThingDef[defName = "CameraConsole"]/costList</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>150</costStuffCount>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_Mounted"]/costList</xpath>
+					<value>
+						<costList>
+							<Mechanism>2</Mechanism>
+							<Electronics>1</Electronics>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_Mounted"]/costList</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>10</costStuffCount>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_Bush"]/costList</xpath>
+					<value>
+						<costList>
+							<Mechanism>2</Mechanism>
+							<Electronics>1</Electronics>
+							<WoodLog>10</WoodLog>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_Bush"]/costList</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>10</costStuffCount>
+					</value>
+				</li>
+	
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_DeadBush"]/costList</xpath>
+					<value>
+						<costList>
+							<Mechanism>2</Mechanism>
+							<Electronics>1</Electronics>
+							<WoodLog>10</WoodLog>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_DeadBush"]/costList</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>10</costStuffCount>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_UnderRoof"]/costList</xpath>
+					<value>
+						<costList>
+							<Mechanism>2</Mechanism>
+							<Electronics>1</Electronics>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_UnderRoof"]/costList</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>7</costStuffCount>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_Ground"]/costList</xpath>
+					<value>
+						<costList>
+							<Mechanism>2</Mechanism>
+							<Electronics>1</Electronics>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_Ground"]/costList</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>12</costStuffCount>
+					</value>
+				</li>
+	
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_Solar"]/costList</xpath>
+					<value>
+						<costList>
+							<Mechanism>4</Mechanism>
+							<Electronics>2</Electronics>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_Solar"]/costList</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>25</costStuffCount>
+					</value>
+				</li>
+	
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_High"]/costList</xpath>
+					<value>
+						<costList>
+							<Mechanism>2</Mechanism>
+							<Electronics>1</Electronics>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/ThingDef[defName = "SurveillanceCamera_High"]/costList</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>50</costStuffCount>
+					</value>
+				</li>
+
+			<!-- Removing Duplicate watchtowers/uneeded researches -->
+
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="WatchTower"]</xpath>
+			</li>
+
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="WatchTelescope"]</xpath>
+			</li>
+
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="WatchTowerRoofed"]</xpath>
+			</li>
+			<!-- Research -->
+
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ResearchProjectDef[defName="WatchTelescope"]</xpath>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[defName="CameraSecurity"]/researchViewX</xpath>
+				<value>
+					<researchViewX>14.00</researchViewX>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[defName="CameraSecurity"]/researchViewY</xpath>
+				<value>
+					<researchViewY>44.00</researchViewY>
+				</value>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ResearchProjectDef[defName="CameraSecurity"]/modExtensions/li[@Class="ResearchTreeSK.ResearchTreeSKModExtension"]</xpath>
+				<nomatch Class="PatchOperationConditional">
+					<xpath>/Defs/ResearchProjectDef[defName="CameraSecurity"]/modExtensions</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="CameraSecurity"]/modExtensions</xpath>
+						<value>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="CameraSecurity"]</xpath>
+						<value>
+						<modExtensions>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</modExtensions>
+						</value>
+					</nomatch>
+				</nomatch>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[defName="CameraSecurityAdvanced"]/researchViewX</xpath>
+				<value>
+					<researchViewX>15.00</researchViewX>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[defName="CameraSecurityAdvanced"]/researchViewY</xpath>
+				<value>
+					<researchViewY>44.00</researchViewY>
+				</value>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ResearchProjectDef[defName="CameraSecurityAdvanced"]/modExtensions/li[@Class="ResearchTreeSK.ResearchTreeSKModExtension"]</xpath>
+				<nomatch Class="PatchOperationConditional">
+					<xpath>/Defs/ResearchProjectDef[defName="CameraSecurityAdvanced"]/modExtensions</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="CameraSecurityAdvanced]/modExtensions</xpath>
+						<value>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="CameraSecurityAdvanced"]</xpath>
+						<value>
+						<modExtensions>
+							<li Class="ResearchTreeSK.ResearchTreeSKModExtension"></li>
+						</modExtensions>
+						</value>
+					</nomatch>
+				</nomatch>
+			</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
